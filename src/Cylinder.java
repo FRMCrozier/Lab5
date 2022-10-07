@@ -1,10 +1,11 @@
 public class Cylinder extends Circle {
     private double height;
+
     public double getHeight() {
         return height;
     }
 
-    public void setHeight(double height){
+    public void setHeight(double height) {
         if (height > 0)
             this.height = height;
         else
@@ -22,16 +23,17 @@ public class Cylinder extends Circle {
         return value;
     }
 
-    public double getVolume(){
-        return  super.getSquare()*getHeight();
+    public double getVolume() {
+        return super.getSquare() * getHeight();
     }
 
     @Override
-    public double getSquare(){
-        return 2 * super.getSquare() + super.getCircumference()* getHeight();
+    public double getSquare() {
+        return 2 * super.getSquare() + super.getCircumference() * getHeight();
     }
 
-    public  Cylinder(){}
+    public Cylinder() {
+    }
 
     public Cylinder(double radius, double height) {
         super(radius);
@@ -40,8 +42,8 @@ public class Cylinder extends Circle {
 
     @Override
     public String toString() {
-        return height > 0 && getRadius() > 0? "Cylinder: radius = " + getRadius() + ", height = " + height +
+        return height > 0 && getRadius() > 0 ? "Cylinder: radius = " + getRadius() + ", height = " + height +
                 ", square = " + this.getSquare() + ", volume = " + getVolume()
-                + "\n" : "Cylinder: Incorrect value (height = " + height + " , radius "+ getRadius() + ")\n";
+                + "\n" : "Cylinder: Incorrect value (height = " + height + " , radius " + getRadius() + ")\n";
     }
 }

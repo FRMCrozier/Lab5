@@ -68,7 +68,7 @@ public class Main {
         /**
          * Пример с вводом неподходящего радиуса, но подходящей высоты.
          */
-        Cylinder cylinder4 = new Cylinder(-5,5);
+        Cylinder cylinder4 = new Cylinder(-5, 5);
         System.out.println(cylinder4);
 
         /**
@@ -78,23 +78,23 @@ public class Main {
         Cylinders cylinders = new Cylinders();
         Random random = new Random();
         int N = random.nextInt(2, 20);
-        int M = random.nextInt(2,N);
+        int M = random.nextInt(2, N);
         Circle[] c = new Circle[N];
 
-        for (int i = 0; i < c.length; i++){
-            c[i] = new Circle(random.nextDouble(0.1,6));
+        for (int i = 0; i < c.length; i++) {
+            c[i] = new Circle(random.nextDouble(0.1, 6));
             circles.addCircle(c[i]);
         }
         for (int j = 0; j < M; j++)
-            cylinders.addCylinder(new Cylinder(c[j].getRadius(), random.nextDouble(0.1,6)));
+            cylinders.addCylinder(new Cylinder(c[j].getRadius(), random.nextDouble(0.1, 6)));
 
 
         System.out.println(N + " CIRCLES:\n" + circles);
-        System.out.println(M + " CYLINDERS:\n" +cylinders);
+        System.out.println(M + " CYLINDERS:\n" + cylinders);
 
 
         System.out.println("THE CIRCLE WITH THE MAX SQUARE:\n" + circles.getMaxCircleSquare());
-        System.out.println("\nAVERAGE VOLUME OF CYLINDERS:\n" +cylinders.getAverageCylinderVolume());
+        System.out.println("\nAVERAGE VOLUME OF CYLINDERS:\n" + cylinders.getAverageCylinderVolume());
 
 
     }

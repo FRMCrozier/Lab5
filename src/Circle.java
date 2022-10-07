@@ -32,7 +32,8 @@ public class Circle {
         return 2 * Math.PI * getRadius();
     }
 
-    public  Circle(){}
+    public Circle() {
+    }
 
     public Circle(double radius) {
         setRadius(radius);
